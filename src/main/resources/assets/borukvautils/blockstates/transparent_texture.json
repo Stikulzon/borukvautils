@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "borukvautils:block/transparent_texture"
+    }
+  }
+}
