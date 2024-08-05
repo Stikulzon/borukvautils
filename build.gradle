@@ -40,7 +40,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation include("maven.modrinth:filament:0.5.2+1.21")
+	modImplementation "maven.modrinth:filament:0.5.2+1.21"
 
 	modImplementation 'eu.pb4:polymer-core:0.9.1+1.21'
 	modImplementation "eu.pb4:polymer-blocks:0.9.1+1.21"
