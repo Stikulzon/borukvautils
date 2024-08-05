@@ -14,10 +14,21 @@ repositories {
 	maven { url 'https://maven.nucleoid.xyz' }
 	maven { url 'https://kneelawk.com/maven' }
 	maven { url "https://maven.alexiil.uk/" }
-	maven { url "https://api.modrinth.com/maven/" }
+//	maven { url "https://api.modrinth.com/maven/" }
 	maven { url = "https://jitpack.io" }
 	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 	mavenLocal()
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 dependencies {
@@ -28,6 +39,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation include("maven.modrinth:filament:0.5.2+1.21")
 
 	modImplementation 'eu.pb4:polymer-core:0.9.1+1.21'
 	modImplementation "eu.pb4:polymer-blocks:0.9.1+1.21"
@@ -40,7 +53,8 @@ dependencies {
 	modImplementation include('eu.pb4:sgui:1.6.0+1.21')
 	modImplementation include('eu.pb4:factorytools:0.3.1+1.21')
 	modImplementation include('com.kneelawk.graphlib:graphlib-core-fabric:2.0.0-beta.1+1.21')
-	
+
+	implementation include('com.github.Chocohead:Fabric-ASM:v2.3')
 }
 
 processResources {
