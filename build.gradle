@@ -14,21 +14,21 @@ repositories {
 	maven { url 'https://maven.nucleoid.xyz' }
 	maven { url 'https://kneelawk.com/maven' }
 	maven { url "https://maven.alexiil.uk/" }
-//	maven { url "https://api.modrinth.com/maven/" }
+	maven { url "https://api.modrinth.com/maven/" }
 	maven { url = "https://jitpack.io" }
 	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 	mavenLocal()
-	exclusiveContent {
-		forRepository {
-			maven {
-				name = "Modrinth"
-				url = "https://api.modrinth.com/maven"
-			}
-		}
-		filter {
-			includeGroup "maven.modrinth"
-		}
-	}
+//	exclusiveContent {
+//		forRepository {
+//			maven {
+//				name = "Modrinth"
+//				url = "https://api.modrinth.com/maven"
+//			}
+//		}
+//		filter {
+//			includeGroup "maven.modrinth"
+//		}
+//	}
 }
 
 dependencies {
@@ -47,12 +47,12 @@ dependencies {
 	modImplementation 'eu.pb4:polymer-resource-pack:0.9.1+1.21'
 	modImplementation 'eu.pb4:polymer-autohost:0.9.1+1.21'
 	modImplementation 'eu.pb4:polymer-virtual-entity:0.9.1+1.21'
-	modImplementation include('eu.pb4:map-canvas-api:0.4.0+1.21')
-	modImplementation include('eu.pb4:common-protection-api:1.0.0')
-	modImplementation include('eu.pb4:sidebar-api:0.5.0+1.21')
-	modImplementation include('eu.pb4:sgui:1.6.0+1.21')
-	modImplementation include('eu.pb4:factorytools:0.3.1+1.21')
-	modImplementation include('com.kneelawk.graphlib:graphlib-core-fabric:2.0.0-beta.1+1.21')
+//	modImplementation include('eu.pb4:map-canvas-api:0.4.0+1.21')
+//	modImplementation include('eu.pb4:common-protection-api:1.0.0')
+//	modImplementation include('eu.pb4:sidebar-api:0.5.0+1.21')
+//	modImplementation include('eu.pb4:sgui:1.6.0+1.21')
+//	modImplementation include('eu.pb4:factorytools:0.3.1+1.21')
+//	modImplementation include('com.kneelawk.graphlib:graphlib-core-fabric:2.0.0-beta.1+1.21')
 
 	implementation include('com.github.Chocohead:Fabric-ASM:v2.3')
 }
