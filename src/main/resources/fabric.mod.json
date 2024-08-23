@@ -24,9 +24,10 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
+		"minecraft": ">=1.21",
 		"java": ">=21",
 		"fabric-api": "*",
-		"filament": ">=0.5.2+1.21"
+		"polymer-core": ">=0.9.11+1.21.1",
+		"polymer-resource-pack": ">=0.9.11+1.21.1"
 	}
 }
